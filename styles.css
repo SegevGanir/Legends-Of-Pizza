@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #333;
+  background: #fff;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
   outline: 1px solid #fff;
 
-  transform: scale(3) translateY(50%);
+  transform: scale(2.9) translateY(42.5%);
 }
 
 .game-container canvas {
