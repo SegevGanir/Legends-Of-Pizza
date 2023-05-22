@@ -14,7 +14,7 @@
 
 @media all and (display-mode: fullscreen) {
   body {
-      transform: scale(1.175);
+      transform: scale(1.175) translateY(3%);
     }
 }
 
