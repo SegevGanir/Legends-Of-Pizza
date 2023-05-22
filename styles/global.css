@@ -12,6 +12,12 @@
   box-sizing:border-box;
 }
 
+@media all and (display-mode: fullscreen) {
+  body {
+      transform: scale(1.175);
+    }
+}
+
 body {
   background: #fff;
   padding: 0;
@@ -27,7 +33,7 @@ body {
   margin: 0 auto;
   outline: 1px solid #fff;
 
-  transform: scale(2.9) translateY(42.5%);
+  transform: scale(3.2) translateY(37.5%);
 }
 
 .game-container canvas {
