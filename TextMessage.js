@@ -15,6 +15,10 @@ class TextMessage {
       <button class="TextMessage_button">Next</button>
     `)
 
+    // this.revealingText = new RevealingText({
+    //   text: this.text,
+    // })
+
     this.element.querySelector("button").addEventListener("click", () => {
       //Close the text message
       this.done();
