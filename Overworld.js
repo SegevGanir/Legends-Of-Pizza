@@ -78,7 +78,8 @@ class Overworld {
 
 
   // this.map.startCutscene([
-  //   { type: "textMessage", text: "This is the very first message using the Typewriter Effect!"}
+  //   { type: "changeMap", map: "DemoRoom"}
+  //   // { type: "textMessage", text: "This is the very first message using the Typewriter Effect!"}
   // ])
 
  }
