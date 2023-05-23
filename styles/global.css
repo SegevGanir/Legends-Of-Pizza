@@ -26,7 +26,7 @@ body {
 }
 
 .game-container {
-  font-family: 'Rubik';
+  font-family: 'Fira Code', monospace;
   position: relative; 
   width: 352px;
   height: 198px;
