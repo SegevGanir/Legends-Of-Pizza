@@ -32,8 +32,6 @@ body {
   width: 358px;
   height: 198px;
   margin: 0 auto;
-  outline: 0.5px solid #000;
-
   transform: scale(3.2) translateY(37.5%);
 }
 
