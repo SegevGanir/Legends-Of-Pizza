@@ -189,7 +189,8 @@ window.OverworldMaps = {
             ]
           }
         ]
-      })
+      }),
     }
   },
+
 }
