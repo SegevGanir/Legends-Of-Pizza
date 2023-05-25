@@ -5,6 +5,23 @@ class SubmissionMenu {
     this.onComplete = onComplete;
   }
 
+  getPages() {
+    return {
+      root: [
+        {
+          label: "Attack",
+          description: "Choose an attack",
+          handler: () => {
+            // Do something when chosen...
+          }
+        }
+      ],
+      attacks: [
+
+      ],
+    }
+  }
+
   decide() {
     this.onComplete({
       action: Actions[ this.caster.actions[0] ],
@@ -12,7 +29,17 @@ class SubmissionMenu {
     })
   }
 
+  showMenu(container) {
+
+  }
+
   init(container) {
-    this.decide()
+
+    if (this.caster.isPlayerControlled) {
+      //Show some UI
+      this.showMenu(container)
+    } else {
+      this.decide()
+    }
   }
 }
