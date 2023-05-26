@@ -24,4 +24,15 @@ window.Actions = {
       { type: "textMessage", text: "{TARGET} is slipping all around!"},
     ]
   },
+  //Items
+  item_recoverStatus: {
+    name: "Heating lamp",
+    description: "Feelin fresh and warm!",
+    targetType: "Friendly",
+    success: [
+      { type: "textMessage", text: "{CASTER} uses a {ACTION}!"},
+      { type: "stateChange", status: null },
+      { type: "textMessage", text: "Feelin fresh!"},
+    ]
+  }
 }

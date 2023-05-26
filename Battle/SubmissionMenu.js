@@ -6,6 +6,15 @@ class SubmissionMenu {
   }
 
   getPages() {
+
+    const backOption = {
+      label: "Go back",
+      description: "Go back to the previous page",
+      handler: () => {
+        this.keyboardMenu.setOptions(this.getPages().root)
+      }
+    };
+
     return {
       root: [
         {
@@ -13,14 +22,16 @@ class SubmissionMenu {
           description: "Choose an attack",
           handler: () => {
             // Do something when chosen...
+            this.keyboardMenu.setOptions( this.getPages().attacks )
           }
         },
         {
-          label: "items",
+          label: "Items",
           description: "Choose an item",
-          disabled: true,
           handler: () => {
             //Go to items page
+            this.keyboardMenu.setOptions( this.getPages().items )
+
           }
         },
         {
@@ -32,16 +43,38 @@ class SubmissionMenu {
         }
       ],
       attacks: [
-
+      ...this.caster.actions.map(key => {
+        const action = Actions[key];
+        return {
+          label: action.name,
+          description: action.description,
+          handler: () => {
+            this.menuSubmit(action);
+          }
+         }
+        }),
+        backOption
       ],
+      items: [
+        //Items will go here
+        backOption
+      ]
     }
   }
 
-  decide() {
+  menuSubmit(action, instanceId = null) {
+
+    this.keyboardMenu?.end();
+
     this.onComplete({
-      action: Actions[ this.caster.actions[0] ],
-      target: this.enemy
+      action,
+      target: action.targetType === "friendly" ? this.caster : this.enemy
     })
+  }
+
+  decide() {
+    //TODO: Enemies should randomly decide what to do.
+    this.menuSubmit(Actions[ this.caster.actions[0] ]);
   }
 
   showMenu(container) {
