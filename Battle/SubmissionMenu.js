@@ -18,6 +18,7 @@ class SubmissionMenu {
         {
           label: "items",
           description: "Choose an item",
+          disabled: true,
           handler: () => {
             //Go to items page
           }

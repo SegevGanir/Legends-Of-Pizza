@@ -7,7 +7,7 @@
   height: 36px;
   padding: 4px;
   background: var(--menu-background);
-  border: 0.5px solid var(--menu-border-color);
+  border: 0.5px solid #000;
   color: var(--menu-font-color);
 }
 .TextMessage_p {
