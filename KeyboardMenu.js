@@ -8,6 +8,16 @@ class KeyboardMenu {
 
   setOptions(options) {
     this.options = options;
+    this.element.innerHTML = this.options.map((option, index) => {
+      return (`
+        <div class="option">
+          <button data-button = "${index}" data-description = "${option.description}">
+           ${option.label}
+          </button>
+          <span class="right">${o.right ? o.right() : ""}</span>
+        </div>
+      `)
+    }).join("")
 
   }
 
