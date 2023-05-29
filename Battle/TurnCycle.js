@@ -18,6 +18,19 @@ class TurnCycle {
       enemy
     })
 
+    //Stop here if we are replacing this Pizza
+    if (submission.replacement) {
+      await this.onNewEvent({
+        type: "replace",
+        replacement: submission.replacement
+      })
+      await this.onNewEvent({
+        type: "textMessage",
+        text: `Go get 'em ${submission.replacement.name}!`
+      })
+      return;
+    }
+
     if (submission.instanceId) {
       this.battle.items = this.battle.items.filter(i => i.instanceId !== submission.instanceId)
     }
