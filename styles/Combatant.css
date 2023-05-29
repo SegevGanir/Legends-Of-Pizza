@@ -46,15 +46,18 @@
 .Combatant_name {
   position: absolute;
   left:-2px;
-  top:-8px;
+  top:-10px;
   white-space: nowrap;
-  background: var(--menu-font-color);
   color: #fff;
   font-size: 5px; /*This is only so small because the component is scaled 2x in battle which is weird */
   padding-left: 2px;
   padding-right: 2px;
+  padding-bottom: 1px;
   margin: 0;
+  border-radius: 2px;
+  background: var(--menu-font-color);
 }
+
 .Combatant_type {
   position: absolute;
   left: 3px;
